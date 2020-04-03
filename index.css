@@ -4,5 +4,8 @@ td{
 }
 
 input{
-    width: 77px;
+    width: 100%;
+    border-radius: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
