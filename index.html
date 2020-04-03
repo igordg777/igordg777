@@ -5,42 +5,43 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>Document</title>
 </head>
-<body style="background-image: url(./images/bg.jpg); background-size:100%;">
-<h2 align="center">Список сотрудников отдела IT</h2>
+<body>
+<h2 align="center">Телефонный справочник Вашей компании</h2>
 <div align="center">
-
 </div>
 
-<table id="tableId" align="center"  width="70%" bordercolor="0ab169" style="font-size: 22px;">
+<table id="tableId" align="center"  width="70%" bordercolor="black" style="font-size: 22px;border-style: dashed">
     <tr bordercolor="0ab169">
-        <td id="nameId" class="search" bgcolor="#0ab169">
-            <input type="text" id="inputNumber" onkeyup="searchAll()" placeholder=" Поиск..." >
+        <td id="nameId" class="search" bgcolor="#ffffff">
+            <input align="center" type="text" id="inputNumber" onkeyup="searchAll()" placeholder=" Поиск..." >
         </td>
-        <td id="nameId" class="search" bgcolor="#d3d3d3" >
+        <td id="nameId" class="search" bgcolor="#ffffff" >
             <input type="text" id="inputName" onkeyup="searchAll()" placeholder=" Поиск...">
         </td>
-        <td id="phoneId" class="search" bgcolor="#d3d3d3" >
+        <td id="phoneId" class="search" bgcolor="#ffffff" >
             <input type="text" id="inputTel" onkeyup="searchAll()" placeholder=" Поиск...">
         </td>
-        <td id="mobileId" class="search" bgcolor="#d3d3d3" >
+        <td id="mobileId" class="search" bgcolor="#ffffff" >
             <input type="text" id="inputMob" onkeyup="searchAll()" placeholder=" Поиск...">
         </td>
-        <td id="emailId" class="search" bgcolor="#d3d3d3">
+        <td id="emailId" class="search" bgcolor="#ffffff">
             <input type="text" id="inputEmail" onkeyup="searchAll()" placeholder=" Поиск...">
         </td>
-        <td id="positionId" class="search" bgcolor="#d3d3d3">
+        <td id="positionId" class="search" bgcolor="#ffffff">
             <input type="text" id="inputPosition" onkeyup="searchAll()" placeholder=" Поиск...">
         </td>
-        <td id="departmentId" class="search" bgcolor="#d3d3d3">
-            <input type="text" id="inputDepartment" onkeyup="searchAll()" placeholder=" Поиск...">
+        <td id="departmentId" class="search" bgcolor="#ffffff">
+            <div align="center" style="font-style: italic; color: #060606de">Поиск по отделу:</div>
+            <select id="department" width="100%" onchange="searchAll()">
+                <option value=""></option>
+            </select>
         </td>
     </tr>
     <tr bordercolor="0ab169">
-        <td id="nameId" bgcolor="#0ab169">
+        <td id="nameId" bgcolor="#d3d3d3">
             №
         </td>
         <td id="nameId" bgcolor="#d3d3d3" >
@@ -64,12 +65,6 @@
     </tr>
 
 </table>
-
-
-
-<script src="index.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>
-
-
-<!--лучше сегодня набросай обычную статическую html страничку с таблицей ФИО, телефон, e-mail, с поиском по всем полям в javascript, данные возьмем скраппером из текущей html или напрямую сделаем сервис для забора данных  ldap в формате json и подкладывание в папку для рендера html-->
