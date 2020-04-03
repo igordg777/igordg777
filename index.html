@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+<h2 align="center">Список сотрудников отдела IT</h2>
+<div align="center">
+
+</div>
+
+<table id="tableId" align="center"  bordercolor="0ab169" style="font-size: 22px;">
+    <tr bordercolor="0ab169">
+        <td id="nameId" bgcolor="#0ab169">
+            <input type="text" id="inputNumber" onkeyup="searchNumber()" placeholder="Номер" title="Type in a name" width="20px">
+        </td>
+        <td id="nameId" bgcolor="#d3d3d3" >
+            <input type="text" id="inputName" onkeyup="searchName()" placeholder="Имя">
+        </td>
+        <td id="phoneId" bgcolor="#d3d3d3" >
+            phone
+        </td>
+        <td id="mobileId" bgcolor="#d3d3d3" >
+            mobile
+        </td>
+        <td id="emailId" bgcolor="#d3d3d3">
+            email
+        </td>
+        <td id="positionId" bgcolor="#d3d3d3">
+            position
+        </td>
+        <td id="departmentId" bgcolor="#d3d3d3">
+            department
+        </td>
+    </tr>
+    <tr bordercolor="0ab169">
+        <td id="nameId" bgcolor="#0ab169">
+            №
+        </td>
+        <td id="nameId" bgcolor="#d3d3d3" >
+            name
+        </td>
+        <td id="phoneId" bgcolor="#d3d3d3" >
+            phone
+        </td>
+        <td id="mobileId" bgcolor="#d3d3d3" >
+            mobile
+        </td>
+        <td id="emailId" bgcolor="#d3d3d3">
+            email
+        </td>
+        <td id="positionId" bgcolor="#d3d3d3">
+            position
+        </td>
+        <td id="departmentId" bgcolor="#d3d3d3">
+            department
+        </td>
+    </tr>
+
+</table>
+
+
+
+<script src="index.js"></script>
+</body>
+</html>
+
+
+<!--лучше сегодня набросай обычную статическую html страничку с таблицей ФИО, телефон, e-mail, с поиском по всем полям в javascript, данные возьмем скраппером из текущей html или напрямую сделаем сервис для забора данных  ldap в формате json и подкладывание в папку для рендера html-->
