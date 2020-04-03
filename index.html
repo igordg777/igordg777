@@ -5,11 +5,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
-<body>
+<body style="background-image: url(./images/bg.jpg); background-size:100%;">
 <h2 align="center">Список сотрудников отдела IT</h2>
 <div align="center">
 
@@ -18,25 +18,25 @@
 <table id="tableId" align="center"  width="70%" bordercolor="0ab169" style="font-size: 22px;">
     <tr bordercolor="0ab169">
         <td id="nameId" class="search" bgcolor="#0ab169">
-            <input type="text" id="inputNumber" onkeyup="searchNumber()" placeholder=" Поиск..." >
+            <input type="text" id="inputNumber" onkeyup="searchAll()" placeholder=" Поиск..." >
         </td>
         <td id="nameId" class="search" bgcolor="#d3d3d3" >
-            <input type="text" id="inputName" onkeyup="searchName()" placeholder=" Поиск...">
+            <input type="text" id="inputName" onkeyup="searchAll()" placeholder=" Поиск...">
         </td>
         <td id="phoneId" class="search" bgcolor="#d3d3d3" >
-            <input type="text" id="inputTel" onkeyup="searchTel()" placeholder=" Поиск...">
+            <input type="text" id="inputTel" onkeyup="searchAll()" placeholder=" Поиск...">
         </td>
         <td id="mobileId" class="search" bgcolor="#d3d3d3" >
-            <input type="text" id="inputMob" onkeyup="searchMob()" placeholder=" Поиск...">
+            <input type="text" id="inputMob" onkeyup="searchAll()" placeholder=" Поиск...">
         </td>
         <td id="emailId" class="search" bgcolor="#d3d3d3">
-            <input type="text" id="inputEmail" onkeyup="searchEmail()" placeholder=" Поиск...">
+            <input type="text" id="inputEmail" onkeyup="searchAll()" placeholder=" Поиск...">
         </td>
         <td id="positionId" class="search" bgcolor="#d3d3d3">
-            <input type="text" id="inputPosition" onkeyup="searchPosition()" placeholder=" Поиск...">
+            <input type="text" id="inputPosition" onkeyup="searchAll()" placeholder=" Поиск...">
         </td>
         <td id="departmentId" class="search" bgcolor="#d3d3d3">
-            <input type="text" id="inputDepartment" onkeyup="searchDepartment()" placeholder=" Поиск...">
+            <input type="text" id="inputDepartment" onkeyup="searchAll()" placeholder=" Поиск...">
         </td>
     </tr>
     <tr bordercolor="0ab169">

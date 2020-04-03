@@ -1,8 +1,35 @@
-
-let arrPeople = [{name: 'Petr', phone: 78554, mobile: 89141657879, email: '1112111.ru', position: 'chief', department: 'IT'}, {name: 'Сергей', phone: 34553, mobile: 89256544564, email: '788787@8989.ru', position: 'Заместитель', department: 'IT'}, {name: 'Иван', phone: 234234, mobile: 8925343543, email: '788787@8989.ru', position: 'Специалист', department: 'IT'},{name: 'Василий', phone: 2343243, mobile: 89273543453, email: '67575@ккк.ru', position: 'Инженер', department: 'IT'},{name: 'Федор', phone: 45433, mobile: 89255645656, email: '78676@hjgg.ru', position: 'Инструктор', department: 'IT'}
+let arrPeople = [{
+    name: 'Petr',
+    phone: 78554,
+    mobile: 89141657879,
+    email: '1112111.ru',
+    position: 'chief',
+    department: 'IT'
+}, {
+    name: 'Сергей',
+    phone: 34553,
+    mobile: 89256544564,
+    email: '788787@8989.ru',
+    position: 'Заместитель',
+    department: 'IT'
+}, {
+    name: 'Иван',
+    phone: 234234,
+    mobile: 8925343543,
+    email: '788787@8989.ru',
+    position: 'Специалист',
+    department: 'IT'
+}, {
+    name: 'Василий',
+    phone: 2343243,
+    mobile: 89273543453,
+    email: '67575@ккк.ru',
+    position: 'Инженер',
+    department: 'IT'
+}, {name: 'Федор', phone: 45433, mobile: 89255645656, email: '78676@hjgg.ru', position: 'Инструктор', department: 'IT'}
 ]
 
-for(let i=0; i<arrPeople.length; i++){
+for (let i = 0; i < arrPeople.length; i++) {
     let newTr = document.createElement('tr');
     newTr.classList.add(`tr${[i]}`);
 
@@ -11,7 +38,7 @@ for(let i=0; i<arrPeople.length; i++){
     newTdNumber.classList.add(`number${[i]}`);
     newTdNumber.setAttribute('bgcolor', '0ab169');
     newTr.appendChild(newTdNumber);
-    newTdNumber.innerHTML = i+ 1;
+    newTdNumber.innerHTML = i + 1;
 
     let newTdname = document.createElement('td');
     newTdname.classList.add(`name${[i]}`);
@@ -53,30 +80,61 @@ for(let i=0; i<arrPeople.length; i++){
     newTr.classList.add(`tr${[i]}`);
 }
 
+function showAll() {
+    let table = document.getElementById("tableId");
+    let tr = table.getElementsByTagName("tr");
+    for (let i = 2; i < tr.length; i++) {
+        let td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+            tr[i].style.display = "";
+
+        }
+    }
+
+}
+
+function searchAll() {
+    showAll()
+    if(document.getElementById("inputNumber").value.trim().length > 0)
+        searchNumber()
+    if(document.getElementById("inputName").value.trim().length > 0)
+        searchName()
+    if(document.getElementById("inputTel").value.trim().length > 0)
+        searchTel()
+    if(document.getElementById("inputMob").value.trim().length > 0)
+        searchMob()
+    if(document.getElementById("inputEmail").value.trim().length > 0)
+        searchEmail()
+    if(document.getElementById("inputPosition").value.trim().length > 0)
+        searchPosition()
+    if(document.getElementById("inputDepartment").value.trim().length > 0)
+        searchDepartment()
+        }
+
 
 function searchNumber() {
 
-        var input, filter, table, tr, td, i;
-        input = document.getElementById("inputNumber");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("tableId");
-        tr = table.getElementsByTagName("tr");
-        for (i = 2; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[0];
-            if (td) {
-                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = "";
-                } else {
-                    tr[i].style.display = "none";
-                }
+    var input, filter, table, tr, td;
+    input = document.getElementById("inputNumber");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("tableId");
+    tr = table.getElementsByTagName("tr");
+    for (i = 2; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                // tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
             }
         }
+    }
 
 }
 
 function searchName() {
 
-    var input, filter, table, tr, td, i;
+    var input, filter, table, tr, td;
     input = document.getElementById("inputName");
     filter = input.value.toUpperCase();
     table = document.getElementById("tableId");
@@ -85,7 +143,7 @@ function searchName() {
         td = tr[i].getElementsByTagName("td")[1];
         if (td) {
             if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
+                // tr[i].style.display = "";
             } else {
                 tr[i].style.display = "none";
             }
@@ -97,7 +155,7 @@ function searchName() {
 
 function searchTel() {
 
-    var input, filter, table, tr, td, i;
+    var input, filter, table, tr, td;
     input = document.getElementById("inputTel");
     filter = input.value.toUpperCase();
     table = document.getElementById("tableId");
@@ -106,7 +164,7 @@ function searchTel() {
         td = tr[i].getElementsByTagName("td")[2];
         if (td) {
             if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
+                // tr[i].style.display = "";
             } else {
                 tr[i].style.display = "none";
             }
@@ -117,7 +175,7 @@ function searchTel() {
 
 function searchMob() {
 
-    var input, filter, table, tr, td, i;
+    var input, filter, table, tr, td;
     input = document.getElementById("inputMob");
     filter = input.value.toUpperCase();
     table = document.getElementById("tableId");
@@ -126,7 +184,7 @@ function searchMob() {
         td = tr[i].getElementsByTagName("td")[3];
         if (td) {
             if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
+                // tr[i].style.display = "";
             } else {
                 tr[i].style.display = "none";
             }
@@ -136,10 +194,9 @@ function searchMob() {
 }
 
 
-
 function searchEmail() {
 
-    var input, filter, table, tr, td, i;
+    var input, filter, table, tr, td;
     input = document.getElementById("inputEmail");
     filter = input.value.toUpperCase();
     table = document.getElementById("tableId");
@@ -148,7 +205,7 @@ function searchEmail() {
         td = tr[i].getElementsByTagName("td")[4];
         if (td) {
             if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
+                // tr[i].style.display = "";
             } else {
                 tr[i].style.display = "none";
             }
@@ -159,7 +216,7 @@ function searchEmail() {
 
 function searchPosition() {
 
-    var input, filter, table, tr, td, i;
+    var input, filter, table, tr, td;
     input = document.getElementById("inputPosition");
     filter = input.value.toUpperCase();
     table = document.getElementById("tableId");
@@ -168,7 +225,7 @@ function searchPosition() {
         td = tr[i].getElementsByTagName("td")[5];
         if (td) {
             if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
+                // tr[i].style.display = "";
             } else {
                 tr[i].style.display = "none";
             }
@@ -179,7 +236,7 @@ function searchPosition() {
 
 function searchDepartment() {
 
-    var input, filter, table, tr, td, i;
+    var input, filter, table, tr, td;
     input = document.getElementById("inputDepartment");
     filter = input.value.toUpperCase();
     table = document.getElementById("tableId");
@@ -188,7 +245,7 @@ function searchDepartment() {
         td = tr[i].getElementsByTagName("td")[6];
         if (td) {
             if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
+                // tr[i].style.display = "";
             } else {
                 tr[i].style.display = "none";
             }
