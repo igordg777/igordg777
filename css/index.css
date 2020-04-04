@@ -1,3 +1,8 @@
+table{
+    box-shadow: 0 0 30px 2px grey;
+}
+
+
 td{
     bgcolor: AFAFAF;
 }
@@ -15,4 +20,31 @@ input{
 select{
     width: 100%;
     border-radius: 30px;
+}
+
+#about{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#thanks {
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 40px 40px #F2F2F2 inset, 0 0 0 0 blue;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: black;
+    transition: .15s ease-in-out;
+}
+#thanks:hover {
+    box-shadow: 0 0 10px 0 blue inset, 0 0 10px 4px blue;
+    color: red;
 }

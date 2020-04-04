@@ -2,70 +2,70 @@ let arrPeople = [{
     name: 'Петр Сергеев',
     phone: "78-55-67",
     mobile: 89141657879,
-    email: '1112@111.ru',
+    email: 'corporation@mail.ru',
     position: 'Начальник отдела',
     department: 'IT'
 }, {
     name: 'Сергей Васильев',
     phone: "34-55-38",
     mobile: 89256544564,
-    email: '788787@8989.ru',
+    email: 'corporation@mail.ru',
     position: 'Заместитель',
     department: 'IT'
 }, {
     name: 'Иван Пронин',
     phone: "23-42-34",
     mobile: 8925343543,
-    email: '788787@8989.ru',
+    email: 'corporation@mail.ru',
     position: 'Специалист',
     department: 'Кадровое обеспечение'
 }, {
     name: 'Василий Алтаев',
     phone: "23-43-43",
     mobile: 89273543453,
-    email: '67575@ккк.ru',
+    email: 'corporation@mail.ru',
     position: 'Инженер',
     department: 'Финансовая служба'
 }, {
     name: 'Федор Константинополев',
     phone: "45-43-39",
     mobile: 89255645656,
-    email: '78676@hjgg.ru',
+    email: 'corporation@mail.ru',
     position: 'Инструктор',
     department: 'Маркетинг'
 }, {
     name: 'Арсений Петров',
     phone: "78-55-67",
     mobile: 89141657879,
-    email: '111@2111.ru',
+    email: 'corporation@mail.ru',
     position: 'Инженер',
     department: 'IT'
 }, {
     name: 'Юрий Плотников',
     phone: "34-55-38",
     mobile: 89256544564,
-    email: '788787@8989.ru',
+    email: 'corporation@mail.ru',
     position: 'Администратор',
     department: 'IT'
 }, {
     name: 'Борис Веденский',
     phone: "23-42-34",
     mobile: 8925343543,
-    email: '788787@8989.ru',
+    email: 'corporation@mail.ru',
     position: 'Специалист',
     department: 'Кадровое обеспечение'
 }, {
     name: 'Константин Перцев',
     phone: "23-43-43",
     mobile: 89273543453,
-    email: '67575@ккк.ru',
+    email: 'corporation@mail.ru',
     position: 'Администратор',
     department: 'Маркетинг'
 }, {
     name: 'Владимир Песков',
     phone: "45-43-39",
     mobile: 89255645656,
-    email: '78676@hjgg.ru',
+    email: 'corporation@mail.ru',
     position: 'Инструктор',
     department: 'Маркетинг'
 }
@@ -175,13 +175,9 @@ function searchNumber() {
     tr = table.getElementsByTagName("tr");
     for (i = 2; i < tr.length; i++) {
         td = tr[i].getElementsByTagName("td")[0];
-        if (td) {
-            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                //tr[i].style.display = "";
-            } else {
+        if (td)
+            if (!(td.innerHTML.toUpperCase().indexOf(filter) > -1))
                 tr[i].style.display = "none";
-            }
-        }
     }
 
 }
@@ -195,13 +191,9 @@ function searchName() {
     tr = table.getElementsByTagName("tr");
     for (i = 2; i < tr.length; i++) {
         td = tr[i].getElementsByTagName("td")[1];
-        if (td) {
-            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                //tr[i].style.display = "";
-            } else {
+        if (td)
+            if (!(td.innerHTML.toUpperCase().indexOf(filter) > -1))
                 tr[i].style.display = "none";
-            }
-        }
     }
 
 }
@@ -215,13 +207,9 @@ function searchTel() {
     tr = table.getElementsByTagName("tr");
     for (i = 2; i < tr.length; i++) {
         td = tr[i].getElementsByTagName("td")[2];
-        if (td) {
-            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                //tr[i].style.display = "";
-            } else {
+        if (td)
+            if (!(td.innerHTML.toUpperCase().indexOf(filter) > -1))
                 tr[i].style.display = "none";
-            }
-        }
     }
 
 }
@@ -235,13 +223,9 @@ function searchMob() {
     tr = table.getElementsByTagName("tr");
     for (i = 2; i < tr.length; i++) {
         td = tr[i].getElementsByTagName("td")[3];
-        if (td) {
-            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                //tr[i].style.display = "";
-            } else {
+        if (td)
+            if (!(td.innerHTML.toUpperCase().indexOf(filter) > -1))
                 tr[i].style.display = "none";
-            }
-        }
     }
 
 }
@@ -255,13 +239,9 @@ function searchEmail() {
     tr = table.getElementsByTagName("tr");
     for (i = 2; i < tr.length; i++) {
         td = tr[i].getElementsByTagName("td")[4];
-        if (td) {
-            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                //tr[i].style.display = "";
-            } else {
+        if (td)
+            if (!(td.innerHTML.toUpperCase().indexOf(filter) > -1))
                 tr[i].style.display = "none";
-            }
-        }
     }
 
 }
@@ -275,13 +255,9 @@ function searchPosition() {
     tr = table.getElementsByTagName("tr");
     for (i = 2; i < tr.length; i++) {
         td = tr[i].getElementsByTagName("td")[5];
-        if (td) {
-            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                //tr[i].style.display = "";
-            } else {
+        if (td)
+            if (!(td.innerHTML.toUpperCase().indexOf(filter) > -1))
                 tr[i].style.display = "none";
-            }
-        }
     }
 
 }
@@ -297,13 +273,18 @@ function searchDepartment() {
     if (filter !== '') {
         for (i = 2; i < tr.length; i++) {
             td = tr[i].getElementsByTagName("td")[6];
-            if (td) {
-                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                    //tr[i].style.display = "";
-                } else {
+            if (td)
+                if (!(td.innerHTML.toUpperCase().indexOf(filter) > -1))
                     tr[i].style.display = "none";
-                }
-            }
         }
     }
+}
+
+function thanks() {
+    swal({
+        title: "Спасибо проекту!",
+        text: "Проект распространяется бесплатно и с открытым исходным кодом. Если Вы хотите сказать спасибо проекту и поддержать разработчика какой-либо символической суммой, то это можно сделать через систему \"Сбербанк онлайн\" по номеру телефона 8-914-154-5189",
+        icon: "success",
+        button: "Ok!",
+    });
 }
