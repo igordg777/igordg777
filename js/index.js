@@ -1,75 +1,5 @@
-let arrPeople = [{
-    name: 'Петр Сергеев',
-    phone: "78-55-67",
-    mobile: 89141657879,
-    email: 'corporation@mail.ru',
-    position: 'Начальник отдела',
-    department: 'IT'
-}, {
-    name: 'Сергей Васильев',
-    phone: "34-55-38",
-    mobile: 89256544564,
-    email: 'corporation@mail.ru',
-    position: 'Заместитель',
-    department: 'IT'
-}, {
-    name: 'Иван Пронин',
-    phone: "23-42-34",
-    mobile: 8925343543,
-    email: 'corporation@mail.ru',
-    position: 'Специалист',
-    department: 'Кадровое обеспечение'
-}, {
-    name: 'Василий Алтаев',
-    phone: "23-43-43",
-    mobile: 89273543453,
-    email: 'corporation@mail.ru',
-    position: 'Инженер',
-    department: 'Финансовая служба'
-}, {
-    name: 'Федор Константинополев',
-    phone: "45-43-39",
-    mobile: 89255645656,
-    email: 'corporation@mail.ru',
-    position: 'Инструктор',
-    department: 'Маркетинг'
-}, {
-    name: 'Арсений Петров',
-    phone: "78-55-67",
-    mobile: 89141657879,
-    email: 'corporation@mail.ru',
-    position: 'Инженер',
-    department: 'IT'
-}, {
-    name: 'Юрий Плотников',
-    phone: "34-55-38",
-    mobile: 89256544564,
-    email: 'corporation@mail.ru',
-    position: 'Администратор',
-    department: 'IT'
-}, {
-    name: 'Борис Веденский',
-    phone: "23-42-34",
-    mobile: 8925343543,
-    email: 'corporation@mail.ru',
-    position: 'Специалист',
-    department: 'Кадровое обеспечение'
-}, {
-    name: 'Константин Перцев',
-    phone: "23-43-43",
-    mobile: 89273543453,
-    email: 'corporation@mail.ru',
-    position: 'Администратор',
-    department: 'Маркетинг'
-}, {
-    name: 'Владимир Песков',
-    phone: "45-43-39",
-    mobile: 89255645656,
-    email: 'corporation@mail.ru',
-    position: 'Инструктор',
-    department: 'Маркетинг'
-}
-]
+// let arrPeople = require('./PhoneBook');
+// console.log('arrPeople')
 
 let arrDepartment = [];
 arrPeople.forEach(function (e) {
@@ -148,6 +78,18 @@ function showAll() {
     }
 }
 
+function result() {
+    let count = 0;
+    let table = document.getElementById("tableId");
+    let tr = table.getElementsByTagName("tr");
+    for (let i = 2; i < tr.length; i++) {
+        if (tr[i].style.display === "") {
+            count++
+        }
+    }
+    document.getElementById('result').innerHTML = "Результаты поиска: " + `<span style='color: red'>${count}</span>`
+}
+
 function searchAll() {
     showAll();
     if (document.getElementById("inputNumber").value.trim().length > 0)
@@ -164,6 +106,7 @@ function searchAll() {
         searchPosition();
     if (document.getElementById("department").value !== '')
         searchDepartment();
+    result()
 }
 
 function searchNumber() {
@@ -263,11 +206,9 @@ function searchPosition() {
 }
 
 function searchDepartment() {
-    console.log(111)
     var input, filter, table, tr, td, i;
     input = document.getElementById("department")
     filter = input.value.toUpperCase();
-    console.log(filter)
     table = document.getElementById("tableId");
     tr = table.getElementsByTagName("tr");
     if (filter !== '') {
