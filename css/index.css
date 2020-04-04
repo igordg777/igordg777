@@ -22,6 +22,10 @@ select{
     border-radius: 30px;
 }
 
+select:hover {
+    box-shadow: 0 0 5px 0 blue inset, 0 0 5px 1px blue;
+    color: darkgreen;
+}
 #about{
     right: 20px;
     font-size: 16px;
