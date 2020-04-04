@@ -48,3 +48,8 @@ select{
     box-shadow: 0 0 10px 0 blue inset, 0 0 10px 4px blue;
     color: red;
 }
+
+.icons:hover {
+    box-shadow: 0 0 10px 0 blue inset, 0 0 10px 4px blue;
+    color: red;
+}
