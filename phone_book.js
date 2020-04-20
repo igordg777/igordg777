@@ -1,5 +1,5 @@
 let arrPeople = [{
-    name: 'Вадим Стебаков',
+    name: 'Глеб Вадимов',
     phone: "23-43-43",
     mobile: 89273543453,
     email: 'corporation@mail.ru',
